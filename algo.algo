@@ -1,0 +1,44 @@
+ALGORITHM whrite_a_sentence
+VAR 
+    sentence : STRING;
+    count;number_word,number_vowel,i: INTEGER;
+
+  BEGIN 
+      //determiner la longueur de la phrase(nombre de caracteres)
+      WRITE("donner une phrase")
+      READ(sentence)
+      count := sentence.length
+
+       //determiner le nombre de mots dans la phrase 
+      
+      FOR i FROM 1 TO sentence.length DO 
+         number_word :=0
+         IF(sentence[i] ==" ") THEN
+             number_word :=number_word + 1 
+         END_IF
+
+       //determiner le nombre de voyelles dans la phrase 
+         number_vowel :=0
+         IF(sentence[i] == "i" && sentence[i] == "o" && sentence[i] == "e" && 
+            sentence[i] == "a" && sentence[i] == "u" && sentence[i] == "y" && ) THEN
+            number_vowel :=number_vowel + 1
+         END_IF
+         
+         IF(sentence[i]==".") THEN 
+             READ("fin de la phrase ")
+         END_IF  
+
+      END_FOR
+      READ("la phrase compte ",count," caracteres ")
+      READ("la phrase compte ",number_word," mots")
+      READ("la phrase compte ",number_vowel," voyelles")
+  END 
+
+  
+
+
+    
+
+
+
+
